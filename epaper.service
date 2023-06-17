@@ -1,0 +1,13 @@
+[Unit]
+Description=e-Paper Display
+After=network-online.target remote-fs.target
+
+[Service]
+EnvironmentFile=-/etc/default/epaper
+ExecStart=python3 -u /opt/transfer.local/epd/epd.py
+KillMode=process
+Restart=always
+Type=simple
+
+[Install]
+WantedBy=multi-user.target

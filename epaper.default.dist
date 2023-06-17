@@ -1,0 +1,12 @@
+# The Host PiAware is running on
+PIAWARE_HOST=""
+
+# The Sentry DSN
+SENTRY_DSN=""
+
+# The Slack Bot Token
+SLACK_BOT_TOKEN=""
+
+# The Slack Channel
+# Used to Send Emergency Squawk Notifications
+SLACK_CHANNEL=""
