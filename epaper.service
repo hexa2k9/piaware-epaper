@@ -8,7 +8,7 @@ Restart=always
 KillMode=process
 Environment="PYTHONUNBUFFERED=1"
 EnvironmentFile=-/etc/default/epaper
-ExecStart=python3 /opt/transfer.local/epd/epd.py
+ExecStart=/opt/transfer.local/epd/.venv/bin/python3 /opt/transfer.local/epd/epd.py
 
 [Install]
 WantedBy=multi-user.target
