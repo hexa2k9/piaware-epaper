@@ -1,5 +1,21 @@
-# The Host PiAware is running on
-PIAWARE_HOST=""
+# The Log Level
+LOGLEVEL=info
+
+# Enable Flightradar24 Status
+# Endpoint defaults to http://PIAWARE_HOST:8754
+ENABLE_FR24=true
+
+# Flightradar24 Endpoint
+export FLIGHTRADAR_HOST="http://127.0.0.1:8754"
+
+# The Host (Endpoint) PiAware is running on
+PIAWARE_HOST="http://127.0.0.1:8080"
+
+# The Number of Retries to send HTTP Requests to PIAWARE_HOST
+PIAWARE_RETRIES=10
+
+# The Backoff Factor for HTTP Retries to PIAWARE_HOST
+PIAWARE_BACKOFF=1.0
 
 # The Sentry DSN
 SENTRY_DSN=""
