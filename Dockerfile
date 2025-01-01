@@ -1,4 +1,4 @@
-FROM python:3.12-alpine3.20 AS builder
+FROM python:3.13-alpine3.21 AS builder
 
 WORKDIR /opt/epaper
 ADD requirements.txt /opt/epaper
@@ -17,7 +17,7 @@ RUN set -eux \
     && virtualenv /opt/virtualenv \
     && /opt/virtualenv/bin/pip install -r requirements.txt
 
-FROM python:3.12-alpine3.21
+FROM python:3.13-alpine3.21
 
 ENV PYTHONUNBUFFERED=1
 ENV PYTHONDONTWRITEBYTECODE=1
