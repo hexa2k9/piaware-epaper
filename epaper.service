@@ -1,5 +1,5 @@
 [Unit]
-Description=e-Paper Display
+Description=PiAware e-Paper Display
 After=network-online.target remote-fs.target
 
 [Service]
