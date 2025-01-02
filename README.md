@@ -1,6 +1,6 @@
 # PiAware Status Display
 
-Based on the [Waveshare 264x176 Resolution (2.7 Inch) e-Paper Display](https://www.amazon.de/gp/product/B075FWLMRV/) this is a Status Display for my [PiAware Feeder](https://www.flightaware.com/adsb/piaware/build). It's basically to play a bit with a Raspberry Pi and e-Paper Displays, learn Python (it's the "first thing" I ever wrote in Python - Code is certainly far from perfect, but it works).
+Based on the [Waveshare 264x176 Resolution (2.7 Inch) e-Paper Display](https://www.amazon.de/gp/product/B075FWLMRV/) this is a Status Display for my [PiAware Feeder](https://www.flightaware.com/adsb/piaware/build). It's basically to play a bit with a Raspberry Pi and e-Paper Displays and write some Python (it's the "first thing" I wrote in Python - Code is certainly far from perfect, but it works).
 
 PiAware is just serving as a Data Source as it's running at home and provided more value to me than Weather (I can look outside after all) or Bitcoin Price. Currently the Display is connected to a Raspberry Pi 3B, but plan is to move it to one of my Raspberry Pi 4 running Docker; thus a Docker image for `linux/arm64` is built from this Repository (currently untested).
 
