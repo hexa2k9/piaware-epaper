@@ -13,6 +13,8 @@ RUN set -eux \
         zlib-dev \
         musl-dev \
         jpeg-dev \
+        libgpiod \
+        libgpiod-dev \
         linux-headers \
     && pip install virtualenv \
     && virtualenv /opt/virtualenv \
