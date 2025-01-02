@@ -27,7 +27,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 
 COPY --from=builder /opt/virtualenv /opt/virtualenv
 
-ADD epd.py /opt/epaper
-ADD epd.ttf /opt/epaper
+ADD epaper.py /opt/epaper
+ADD epaper.ttf /opt/epaper
 
-CMD ["/opt/virtualenv/bin/python", "/opt/epaper/epd.py"]
+CMD ["/opt/virtualenv/bin/python", "/opt/epaper/epaper.py"]

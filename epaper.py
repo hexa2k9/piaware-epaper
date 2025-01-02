@@ -46,10 +46,6 @@ ICAO_OF_SPECIAL_INTEREST = {
 }
 REGISTRATION_OF_SPECIAL_INTEREST = {
     # 'A7BHN': 'QTR85 Qatar DUS (REG)'
-    # 'DESAA': 'Michael Rauner',
-    # 'DEIMZ': 'Michael Rauner',
-    # 'DEEDH': 'Michael Rauner',
-    # 'DEYAR': 'Michael Rauner',
 }
 
 
@@ -651,7 +647,7 @@ class PiAware:
         """
         time_start = time.time()
 
-        font_path = os.path.join(PATH_ROOT, "epd.ttf")
+        font_path = os.path.join(PATH_ROOT, "epaper.ttf")
         font_s = ImageFont.truetype(font_path, 11)
         font_m = ImageFont.truetype(font_path, 12)
 
@@ -777,7 +773,7 @@ class PiAware:
 
             epd.display(epd.getbuffer(ep_image))
             epd.sleep()
-            ep_image.save(os.path.join(PATH_ROOT, "epd.jpg"))
+            ep_image.save(os.path.join(PATH_ROOT, "epaper.jpg"))
             new_cycle = cycle + 1
 
             logging.info(
