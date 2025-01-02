@@ -8,6 +8,7 @@ RUN set -eux \
     && apk add \
         build-base \
         alpine-sdk \
+        swig \
         zlib \
         zlib-dev \
         musl-dev \
