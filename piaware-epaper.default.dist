@@ -6,7 +6,7 @@ LOGLEVEL=info
 ENABLE_FR24=true
 
 # Flightradar24 Endpoint
-export FLIGHTRADAR_HOST="http://127.0.0.1:8754"
+FLIGHTRADAR_HOST="http://127.0.0.1:8754"
 
 # The Host (Endpoint) PiAware is running on
 PIAWARE_HOST="http://127.0.0.1:8080"
