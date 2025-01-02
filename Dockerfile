@@ -15,6 +15,7 @@ RUN set -eux \
         linux-headers \
     && pip install virtualenv \
     && virtualenv /opt/virtualenv \
+    && /opt/virtualenv/bin/pip install --upgrade pip \
     && /opt/virtualenv/bin/pip install -r requirements.txt
 
 FROM python:3.13-alpine3.21
