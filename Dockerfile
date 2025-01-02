@@ -27,6 +27,8 @@ ENV PYTHONDONTWRITEBYTECODE=1
 
 COPY --from=builder /opt/virtualenv /opt/virtualenv
 
+WORKDIR /opt/epaper
+
 ADD piaware-epaper.py /opt/epaper
 ADD epaper.ttf /opt/epaper
 
