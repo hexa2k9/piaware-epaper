@@ -351,6 +351,7 @@ class PiAware:
 
         PiAware.__clear(clear=True, sleep=True)
         GPIO.cleanup()
+        GPIO.setmode(GPIO.BCM)
 
         logging.info("Shutdown on Signal %s complete.", signal_name)
         sys.exit(0)
