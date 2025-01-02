@@ -1,5 +1,5 @@
 [Unit]
-Description=PiAware e-Paper Display
+Description=PiAware e-Paper Status Display
 After=network-online.target remote-fs.target
 
 [Service]
@@ -7,8 +7,9 @@ Type=simple
 Restart=always
 KillMode=process
 Environment="PYTHONUNBUFFERED=1"
-EnvironmentFile=-/etc/default/piawaer-epaper
-ExecStart=/opt/piaware-epaper/.venv/bin/python3 /opt/piaware-epaper/epaper.py
+Environment="PYTHONDONTWRITEBYTECODE=1"
+EnvironmentFile=-/etc/default/piaware-epaper
+ExecStart=/opt/piaware-epaper/.venv/bin/python3 /opt/piaware-epaper/piaware-epaper.py
 
 [Install]
 WantedBy=multi-user.target
