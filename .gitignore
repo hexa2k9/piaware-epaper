@@ -1,3 +1,5 @@
-epd.jpg
+__pycache__/
+
+epaper.jpg
 epaper.default
 .DS_Store
