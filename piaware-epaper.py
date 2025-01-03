@@ -34,6 +34,7 @@ PIAWARE_HOST = os.getenv("PIAWARE_HOST", "http://127.0.0.1:8080")
 PIAWARE_BACKOFF = os.getenv("PIAWARE_BACKOFF", "1.0")
 PIAWARE_RETRIES = os.getenv("PIAWARE_RETRIES", "10")
 FLIGHTRADAR_HOST = os.getenv("FLIGHTRADAR_HOST", "http://127.0.0.1:8754")
+RUNNING_IN_DOCKER = os.path.exists('/.dockerenv')
 EMERGENCY_SQUAWK = {
     "7500": "Unlawful interference (hijacking)",
     "7600": "Aircraft has lost verbal communication",
@@ -776,7 +777,10 @@ class PiAware:
 
             epd.display(epd.getbuffer(ep_image))
             epd.sleep()
-            ep_image.save(os.path.join(PATH_ROOT, "epaper.jpg"))
+
+            if not RUNNING_IN_DOCKER:
+                ep_image.save(os.path.join(PATH_ROOT, "epaper.jpg"))
+            
             new_cycle = cycle + 1
 
             logging.info(
