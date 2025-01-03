@@ -1,6 +1,6 @@
 certifi==2024.12.14
 charset-normalizer==3.1.0
-idna==3.7
+idna==3.10
 Pillow==11.0.0
 requests==2.32.3
 sentry-sdk==2.19.2
