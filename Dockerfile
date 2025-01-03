@@ -11,6 +11,7 @@ RUN set -eux \
         zlib-dev \
         musl-dev \
         jpeg-dev \
+        freetype-dev \
         libgpiod-dev \
         linux-headers \
     && pip install virtualenv \
@@ -27,7 +28,8 @@ RUN set -eux \
     && apk add --no-cache \
         libjpeg \
         jpeg-dev \
-        zlib-dev
+        zlib-dev \
+        freetype-dev
 
 COPY --from=builder /opt/virtualenv /opt/virtualenv
 
