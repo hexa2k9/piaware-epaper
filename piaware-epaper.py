@@ -220,19 +220,22 @@ class PiAware:
                 try:
                     client = slack_sdk.WebClient(token=slack_token)
 
+                    piaware_host_parsed = urlparse(PIAWARE_HOST)
+                    piaware_host = piaware_host_parsed.netloc
+
                     if mode == "emergency":
                         summary = f"ICAO Emergency Squawk {squawk}"
-                        header_block = f"ICAO Emergency Squawk on {PIAWARE_HOST}"
+                        header_block = f"ICAO Emergency Squawk on {piaware_host}"
                         description_block = EMERGENCY_SQUAWK[squawk]
                     elif mode == "registration":
                         summary = f"Registration of Special Interest {callsign}"
                         header_block = (
-                            f"Registration of Special Interest on {PIAWARE_HOST}"
+                            f"Registration of Special Interest on {piaware_host}"
                         )
                         description_block = REGISTRATION_OF_SPECIAL_INTEREST[callsign]
                     else:
                         summary = f"Flight of Special Interest {callsign}"
-                        header_block = f"Flight of Special Interest on {PIAWARE_HOST}"
+                        header_block = f"Flight of Special Interest on {piaware_host}"
                         description_block = ICAO_OF_SPECIAL_INTEREST[icao_reg]
 
                     if str(distance).lower() == "unknown":
