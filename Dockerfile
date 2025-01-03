@@ -1,5 +1,8 @@
 FROM python:3.13-alpine3.21 AS builder
 
+ENV PYTHONUNBUFFERED 1
+ENV PYTHONDONTWRITEBYTECODE 1
+
 WORKDIR /opt/epaper
 ADD requirements.txt /opt/epaper
 
@@ -22,8 +25,8 @@ RUN set -eux \
 
 FROM python:3.13-alpine3.21
 
-ENV PYTHONUNBUFFERED=1
-ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED 1
+ENV PYTHONDONTWRITEBYTECODE 1
 
 RUN set -eux \
     && apk add --no-cache \

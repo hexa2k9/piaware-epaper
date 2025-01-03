@@ -780,7 +780,7 @@ class PiAware:
 
             if not RUNNING_IN_DOCKER:
                 ep_image.save(os.path.join(PATH_ROOT, "epaper.jpg"))
-            
+
             new_cycle = cycle + 1
 
             logging.info(
