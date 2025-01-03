@@ -870,7 +870,6 @@ class PiAware:
         )
 
         signal.signal(signal.SIGINT, PiAware.__process_shutdown_signal)
-        signal.signal(signal.SIGINT, PiAware.__process_shutdown_signal)
         signal.signal(signal.SIGQUIT, PiAware.__process_shutdown_signal)
         signal.signal(signal.SIGTERM, PiAware.__process_shutdown_signal)
 
