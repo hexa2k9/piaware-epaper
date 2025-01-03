@@ -25,7 +25,9 @@ ENV PYTHONDONTWRITEBYTECODE=1
 
 RUN set -eux \
     && apk add --no-cache \
-        jpeg-dev
+        libjpeg \
+        jpeg-dev \
+        zlib-dev
 
 COPY --from=builder /opt/virtualenv /opt/virtualenv
 
