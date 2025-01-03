@@ -6,6 +6,7 @@ ADD requirements.txt /opt/epaper
 RUN set -eux \
     && apk update \
     && apk add \
+        tk \
         build-base \
         alpine-sdk \
         zlib-dev \
@@ -26,6 +27,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 
 RUN set -eux \
     && apk add --no-cache \
+        tk \
         libjpeg \
         jpeg-dev \
         zlib-dev \
