@@ -3,6 +3,7 @@ services:
     container_name: piaware_epaper
     image: ghcr.io/hexa2k9/piaware-epaper
     restart: unless-stopped
+    privileged: true
     environment:
       LOGLEVEL: info
       ENABLE_FR24: true
