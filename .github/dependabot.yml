@@ -8,20 +8,23 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      time: "06:00"
+      interval: "daily"
     assignees:
       - "hexa2k9"
 
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
-      interval: "weekly"
+      time: "06:00"
+      interval: "daily"
     assignees:
       - "hexa2k9"
 
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
-      interval: "weekly"
+      time: "06:00"
+      interval: "daily"
     assignees:
       - "hexa2k9"
