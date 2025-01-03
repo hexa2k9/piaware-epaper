@@ -1,0 +1,15 @@
+services:
+  piaware-epaper:
+    container_name: piaware_epaper
+    image: ghcr.io/hexa2k9/piaware-epaper
+    restart: unless-stopped
+    environment:
+      LOGLEVEL: info
+      ENABLE_FR24: true
+      FLIGHTRADAR_HOST: "http://127.0.0.1:8754"
+      PIAWARE_HOST: "http://127.0.0.1:8080"
+      PIAWARE_RETRIES: 10
+      PIAWARE_BACKOFF: 1.0
+      SENTRY_DSN: ""
+      SLACK_BOT_TOKEN: ""
+      SLACK_CHANNEL: ""

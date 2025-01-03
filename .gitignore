@@ -3,3 +3,5 @@ __pycache__/
 .DS_Store
 epaper.jpg
 piaware-epaper.default
+
+docker-compose.override.yaml
