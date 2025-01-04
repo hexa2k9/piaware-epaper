@@ -1,2 +1,4 @@
+-r requirements.txt
+
 black==24.10.0
 pylint==3.3.3
