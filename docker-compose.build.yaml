@@ -1,0 +1,7 @@
+services:
+  piaware-epaper:
+    image: ""
+    build:
+      pull: true
+      context: .
+      dockerfile: Dockerfile

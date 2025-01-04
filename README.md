@@ -10,11 +10,15 @@ As a bonus the following image is written with each refresh when running outside
 
 ## Setup
 
-Clone Repository
+In any case (Systemd vs. Docker) you'll need the repository cloned and your Raspberry Pi [to be setup](https://www.waveshare.com/wiki/2.7inch_e-Paper_HAT_Manual#Enable_SPI_Interface) to run properly with the Display.
 
 ```bash
 git clone https://github.com/hexa2k9/piaware-epaper.git /opt/piaware-epaper
 ```
+
+### using Systemd
+
+This probably needs some System Packages. I cannot really remember which ones might be required as it's been [a while](https://github.com/hexa2k9/piaware-epaper/commit/9f270ae9d4dc08d16e1c89b1a685c71022770e01) since I started this.
 
 Setup Python Virtualenv & Requirements
 
@@ -47,6 +51,18 @@ Start Service
 
 ```bash
 systemctl start piaware-epaper.service
+```
+
+### using Docker
+
+```bash
+cd /opt/piaware-epaper
+cp docker-compose.override.yaml.dist docker-compose.override.yaml
+
+# Adjust as needed
+vim docker-compose.override.yaml
+
+docker compose up -d
 ```
 
 ## Display Buttons
