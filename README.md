@@ -4,7 +4,7 @@ Based on the [Waveshare 264x176 Resolution (2.7 Inch) e-Paper Display](https://w
 
 PiAware is just serving as a Data Source as it's running at home and provided more value to me than Weather (I can look outside after all) or Bitcoin Price. Currently the Display is connected to a Raspberry Pi 3B, but plan is to move it to one of my Raspberry Pi 4 running Docker; thus a Docker image for `linux/arm64` and `linux/arm/v7` is built from this Repository.
 
-As a bonus the following image is written with each refresh when running outside of Docker:
+As a bonus the following image is written with each refresh when running outside of Docker (it's what the Display shows as well):
 
 ![status display](images/docs.jpg "Status Display")
 
