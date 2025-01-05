@@ -367,9 +367,9 @@ class PiAware:
         epd.init()
 
         if clear:
-            if display_color not in ["0x00", "0xFF"]:
+            if display_color not in [0x00, 0xFF]:
                 logging.warning("Got invalid Display Color: '%s' - Resetting to '0xFF'.", display_color)
-                display_color = "0xFF"
+                display_color = 0xFF
 
             epd.Clear(display_color)
 
