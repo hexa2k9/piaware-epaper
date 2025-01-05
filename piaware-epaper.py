@@ -322,10 +322,11 @@ class PiAware:
     @staticmethod
     def __process_interrupt(channel: int) -> None:
         if channel == 5:
-            logging.info("Received Event on Pin %s.", channel)
+            logging.info("Received Event on Pin %s - Clearing Display (Black).", channel)
+            PiAware.__clear(clear=True, sleep=False, display_color="0x00")
         elif channel == 6:
-            logging.info("Received Event on Pin %s - Clearing Display.", channel)
-            PiAware.__clear(clear=True, sleep=False)
+            logging.info("Received Event on Pin %s - Clearing Display (White).", channel)
+            PiAware.__clear(clear=True, sleep=False, display_color="0xFF")
         elif channel == 13:
             logging.info("Received Event on Pin %s - Executing Refresh.", channel)
             PiAware.refresh(cycle=0)
@@ -357,12 +358,20 @@ class PiAware:
         sys.exit(0)
 
     @staticmethod
-    def __clear(clear: bool = False, sleep: bool = False):
+    def __clear(
+        clear: bool = False,
+        sleep: bool = False,
+        display_color: str = "0xFF"
+    ) -> epaper.epaper:
         epd = epaper.epaper("epd2in7").EPD()
         epd.init()
 
         if clear:
-            epd.Clear(0xFF)
+            if display_color not in ["0x00", "0xFF"]:
+                logging.warning("Got invalid Display Color: '%s' - Resetting to '0xFF'.", display_color)
+                display_color = "0xFF"
+
+            epd.Clear(display_color)
 
         if sleep:
             epd.sleep()
