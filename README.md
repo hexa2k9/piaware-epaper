@@ -67,9 +67,9 @@ docker compose up -d
 
 ## Display Buttons
 
-| Button   | Function           |
-|----------|--------------------|
-| `KEY1`   | Draw Display Black |
-| `KEY2`   | Draw Display White |
-| `KEY3`   | Refresh Status     |
-| `KEY4`   | Shutdown           |
+| Button   | Function       |
+|----------|----------------|
+| `KEY1`   | - none -       |
+| `KEY2`   | Clear Display  |
+| `KEY3`   | Refresh Status |
+| `KEY4`   | Shutdown       |
