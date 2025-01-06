@@ -9,4 +9,4 @@ urllib3==2.3.0
 spidev==3.6; sys_platform == 'linux'
 RPi.GPIO==0.7.1; sys_platform == 'linux'
 waveshare-epaper==1.3.0; sys_platform == 'linux'
-gpiozero==1.6.2; sys_platform == 'linux'
+gpiozero==2.0.1; sys_platform == 'linux'
