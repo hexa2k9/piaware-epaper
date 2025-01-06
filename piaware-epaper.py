@@ -34,7 +34,7 @@ PIAWARE_HOST = os.getenv("PIAWARE_HOST", "http://127.0.0.1:8080")
 PIAWARE_BACKOFF = os.getenv("PIAWARE_BACKOFF", "1.0")
 PIAWARE_RETRIES = os.getenv("PIAWARE_RETRIES", "10")
 FLIGHTRADAR_HOST = os.getenv("FLIGHTRADAR_HOST", "http://127.0.0.1:8754")
-RUNNING_IN_DOCKER = os.path.exists('/.dockerenv')
+RUNNING_IN_DOCKER = os.path.exists("/.dockerenv")
 EMERGENCY_SQUAWK = {
     "7500": "Unlawful interference (hijacking)",
     "7600": "Aircraft has lost verbal communication",
@@ -322,10 +322,14 @@ class PiAware:
     @staticmethod
     def __process_interrupt(channel: int) -> None:
         if channel == 5:
-            logging.info("Received Event on Pin %s - Clearing Display (Black).", channel)
+            logging.info(
+                "Received Event on Pin %s - Clearing Display (Black).", channel
+            )
             PiAware.__clear(clear=True, sleep=False, display_color=0x00)
         elif channel == 6:
-            logging.info("Received Event on Pin %s - Clearing Display (White).", channel)
+            logging.info(
+                "Received Event on Pin %s - Clearing Display (White).", channel
+            )
             PiAware.__clear(clear=True, sleep=False, display_color=0xFF)
         elif channel == 13:
             logging.info("Received Event on Pin %s - Executing Refresh.", channel)
@@ -359,16 +363,17 @@ class PiAware:
 
     @staticmethod
     def __clear(
-        clear: bool = False,
-        sleep: bool = False,
-        display_color: int = 0xFF
+        clear: bool = False, sleep: bool = False, display_color: int = 0xFF
     ) -> epaper.epaper:
         epd = epaper.epaper("epd2in7").EPD()
         epd.init()
 
         if clear:
             if display_color not in [0x00, 0xFF]:
-                logging.warning("Got invalid Display Color: '%s' - Resetting to '0xFF'.", display_color)
+                logging.warning(
+                    "Got invalid Display Color: '%s' - Resetting to '0xFF'.",
+                    display_color,
+                )
                 display_color = 0xFF
 
             epd.Clear(display_color)
