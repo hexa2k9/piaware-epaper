@@ -41,12 +41,14 @@ EMERGENCY_SQUAWK = {
     "7700": "General emergency",
 }
 ICAO_OF_SPECIAL_INTEREST = {
-    "3EA12C": "Luftwaffe A350-900 VIP 10+01 Konrad Adenauer",
-    "3F5D91": "Luftwaffe A350-900 VIP 10+02 Theodor Heuss",
-    "3E854F": "Luftwaffe A350-900 VIP 10+03 Kurt Schumacher",
+    "3EA12C": "Luftwaffe A350-900 VIP 10+01 Konrad Adenauer", # https://www.planespotters.net/hex/3EA12C
+    "3F5D91": "Luftwaffe A350-900 VIP 10+02 Theodor Heuss",   # https://www.planespotters.net/hex/3F5D91
+    "3E854F": "Luftwaffe A350-900 VIP 10+03 Kurt Schumacher", # https://www.planespotters.net/hex/3E854F
 
     "ADFDF8": "Air Force VC-25A 82-8000", # https://www.planespotters.net/hex/ADFDF8
     "ADFDF9": "Air Force VC-25A 92-9000", # https://www.planespotters.net/hex/ADFDF9
+
+    "A835AF": "Gulfstream G650ER N628TS", # https://www.planespotters.net/hex/A835AF
 }
 REGISTRATION_OF_SPECIAL_INTEREST = {
     # 'A7BHN': 'QTR85 Qatar DUS (REG)'
