@@ -44,6 +44,9 @@ ICAO_OF_SPECIAL_INTEREST = {
     "3EA12C": "Luftwaffe A350-900 VIP 10+01 Konrad Adenauer",
     "3F5D91": "Luftwaffe A350-900 VIP 10+02 Theodor Heuss",
     "3E854F": "Luftwaffe A350-900 VIP 10+03 Kurt Schumacher",
+
+    "ADFDF8": "Air Force VC-25A 82-8000", # https://www.planespotters.net/hex/ADFDF8
+    "ADFDF9": "Air Force VC-25A 92-9000", # https://www.planespotters.net/hex/ADFDF9
 }
 REGISTRATION_OF_SPECIAL_INTEREST = {
     # 'A7BHN': 'QTR85 Qatar DUS (REG)'
