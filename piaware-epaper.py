@@ -48,6 +48,8 @@ ICAO_OF_SPECIAL_INTEREST = {
     "ADFDF8": "Air Force VC-25A 82-8000", # https://www.planespotters.net/hex/ADFDF8
     "ADFDF9": "Air Force VC-25A 92-9000", # https://www.planespotters.net/hex/ADFDF9
 
+    "50815F": "Ukraine Air Enterprise A319-115X CJ", # https://www.planespotters.net/hex/50815F
+
     "A835AF": "Gulfstream G650ER N628TS", # https://www.planespotters.net/hex/A835AF
 }
 REGISTRATION_OF_SPECIAL_INTEREST = {
