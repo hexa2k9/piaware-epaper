@@ -1,4 +1,4 @@
-FROM python:3.13.5-alpine3.21 AS builder
+FROM python:3.13.6-alpine3.21 AS builder
 
 ENV PYTHONUNBUFFERED=1
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -23,7 +23,7 @@ RUN set -eux \
     && /opt/virtualenv/bin/pip install --upgrade pip \
     && /opt/virtualenv/bin/pip install -r requirements.txt
 
-FROM python:3.13.5-alpine3.21
+FROM python:3.13.6-alpine3.21
 
 ENV PYTHONUNBUFFERED=1
 ENV PYTHONDONTWRITEBYTECODE=1
