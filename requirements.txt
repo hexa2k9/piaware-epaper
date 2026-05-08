@@ -5,7 +5,7 @@ Pillow==12.2.0
 requests==2.33.1
 sentry-sdk==2.59.0
 slack-sdk==3.41.0
-urllib3==2.6.3
+urllib3==2.7.0
 spidev==3.8; sys_platform == 'linux'
 RPi.GPIO==0.7.1; sys_platform == 'linux'
 waveshare-epaper==1.4.0; sys_platform == 'linux'
