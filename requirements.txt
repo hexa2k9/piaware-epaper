@@ -4,7 +4,7 @@ idna==3.18
 Pillow==12.2.0
 requests==2.34.2
 sentry-sdk==2.63.0
-slack-sdk==3.42.0
+slack-sdk==3.43.0
 urllib3==2.7.0
 spidev==3.8; sys_platform == 'linux'
 RPi.GPIO==0.7.1; sys_platform == 'linux'
