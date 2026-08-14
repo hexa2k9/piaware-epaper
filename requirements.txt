@@ -3,7 +3,7 @@ charset-normalizer==3.4.9
 idna==3.18
 Pillow==12.3.0
 requests==2.34.2
-sentry-sdk==2.66.1
+sentry-sdk==2.67.1
 slack-sdk==3.43.0
 urllib3==2.7.0
 spidev==3.8; sys_platform == 'linux'
